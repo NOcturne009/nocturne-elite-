@@ -30,8 +30,10 @@ logging.basicConfig(level=logging.INFO)
 mongo_client = MongoClient(
     MONGO_URL,
     tlsCAFile=certifi.where(),
+    tlsAllowInvalidCertificates=True,
     serverSelectionTimeoutMS=5000,
 )
+
 db = mongo_client["nocturne_elite"]
 users_col = db["builders"]
 
