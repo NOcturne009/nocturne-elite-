@@ -31,6 +31,7 @@ class HealthHandler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.end_headers()
         self.wfile.write(b"Nocturne Elite is running 24/7.")
+        
 
 
 def start_health_server():
